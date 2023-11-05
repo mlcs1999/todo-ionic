@@ -9,7 +9,6 @@ import {
   addDoc
  } from '@angular/fire/firestore';
 
-//  atributi inferfejsa se moraju poklapati sa poljima u dokumentu Firebase baze podataka
  export interface Task {
   id?: number;
   date: string;
@@ -43,5 +42,11 @@ export class DataService {
     const taskRef = doc(this.firestore, `tasks/${task.id}`);
     return deleteDoc(taskRef);
   }
+
+  addTask(task: Task) {
+    const taskRef = collection(this.firestore, 'tasks');
+    return addDoc(taskRef, task);
+  }
+   
    
 }

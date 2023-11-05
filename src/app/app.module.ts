@@ -19,6 +19,7 @@ import { provideFirestore, getFirestore} from '@angular/fire/firestore';
     BrowserModule, 
     IonicModule.forRoot(), 
     AppRoutingModule,
+    // inicijaliza firebase aplikacije i baze podataka
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
   ],

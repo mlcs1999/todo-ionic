@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
+import { DataService } from '../service/data.service';
 
 @Component({
   selector: 'app-add-new-item',
@@ -10,12 +11,10 @@ import { ModalController } from '@ionic/angular';
 export class AddNewItemPage implements OnInit {
 
 
-
-  constructor(public modalCtrl: ModalController) { }
+  constructor(
+    public modalCtrl: ModalController) { }
 
   ngOnInit() {
   }
-
-
 
 }
